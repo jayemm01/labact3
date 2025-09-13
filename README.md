@@ -34,16 +34,14 @@
    revoked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
-
 ```
+
 4. Run the server:
-```sh
-npm run dev   # with nodemon
-# or
-npm start
-```
+   ```sh
+   npm run dev   # with nodemon
+   # or
+   npm start
    
-
 Server runs at: [http://localhost:3000](http://localhost:3000)
 
 ## API Endpoints
