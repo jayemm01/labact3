@@ -26,7 +26,7 @@
    role VARCHAR(30) DEFAULT 'student',
    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+```
    CREATE TABLE IF NOT EXISTS revoked_tokens (
    id INT AUTO_INCREMENT PRIMARY KEY,
    jti VARCHAR(64) NOT NULL UNIQUE,
@@ -34,13 +34,13 @@
    revoked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
-```
 
 4. Run the server:
    ```sh
    npm run dev   # with nodemon
    # or
    npm start
+   ```
    
 Server runs at: [http://localhost:3000](http://localhost:3000)
 
