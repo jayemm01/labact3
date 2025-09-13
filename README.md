@@ -18,31 +18,31 @@
 
 3. Initialize MySQL database:
    ```sql
-`
-   ```
-CREATE TABLE IF NOT EXISTS users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  email VARCHAR(100) NOT NULL UNIQUE,
-  password_hash VARCHAR(255) NOT NULL,
-  full_name VARCHAR(120),
-  role VARCHAR(30) DEFAULT 'student',
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+   CREATE TABLE IF NOT EXISTS users (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   email VARCHAR(100) NOT NULL UNIQUE,
+   password_hash VARCHAR(255) NOT NULL,
+   full_name VARCHAR(120),
+   role VARCHAR(30) DEFAULT 'student',
+   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE IF NOT EXISTS revoked_tokens (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  jti VARCHAR(64) NOT NULL UNIQUE,
-  expires_at DATETIME NOT NULL,
-  revoked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+   CREATE TABLE IF NOT EXISTS revoked_tokens (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   jti VARCHAR(64) NOT NULL UNIQUE,
+   expires_at DATETIME NOT NULL,
+   revoked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
+```
 4. Run the server:
-   ```sh
-   npm run dev   # with nodemon
-   # or
-   npm start
-   ```
+```sh
+npm run dev   # with nodemon
+# or
+npm start
+```
+   
 
 Server runs at: [http://localhost:3000](http://localhost:3000)
 
